@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/componentBaseW13_Ex1/calAreaCiecle?WSDL" uri="xml-resources/web-service-references/calAreaCiecle/wsdl/localhost_8080/componentBaseW13_Ex1/calAreaCiecle.wsdl"/>
+    <system systemId="http://localhost:8080/componentBaseW13_Ex1/calAreaCiecle?xsd=1" uri="xml-resources/web-service-references/calAreaCiecle/wsdl/localhost_8080/componentBaseW13_Ex1/calAreaCiecle.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/componentBaseW13_Ex1/calRoundCircle?WSDL" uri="xml-resources/web-service-references/calRoundCircle/wsdl/localhost_8080/componentBaseW13_Ex1/calRoundCircle.wsdl"/>
+    <system systemId="http://localhost:8080/componentBaseW13_Ex1/calRoundCircle?xsd=1" uri="xml-resources/web-service-references/calRoundCircle/wsdl/localhost_8080/componentBaseW13_Ex1/calRoundCircle.xsd_1.xsd"/>
+</catalog>

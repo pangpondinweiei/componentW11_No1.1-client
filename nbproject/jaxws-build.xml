@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${libs.jaxws21.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-client-calAreaCiecle" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/calAreaCiecle"/>
+        <property name="wsdl-calAreaCiecle" location="xml-resources/web-service-references/calAreaCiecle/wsdl/localhost_8080/componentBaseW13_Ex1/calAreaCiecle.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/calAreaCiecle" destdir="${build.generated.dir}/jax-wsCache/calAreaCiecle" wsdl="${wsdl-calAreaCiecle}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/componentBaseW13_Ex1/calAreaCiecle?WSDL" xnocompile="true" xendorsed="true" package="servicesclient">
+            <depends file="${wsdl-calAreaCiecle}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/calAreaCiecle"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/calAreaCiecle">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-calAreaCiecle" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/calAreaCiecle"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/servicesclient"/>
+    </target>
+    <target name="wsimport-client-calRoundCircle" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/calRoundCircle"/>
+        <property name="wsdl-calRoundCircle" location="xml-resources/web-service-references/calRoundCircle/wsdl/localhost_8080/componentBaseW13_Ex1/calRoundCircle.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/calRoundCircle" destdir="${build.generated.dir}/jax-wsCache/calRoundCircle" wsdl="${wsdl-calRoundCircle}" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/componentBaseW13_Ex1/calRoundCircle?WSDL" xnocompile="true" xendorsed="true">
+            <depends file="${wsdl-calRoundCircle}"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/calRoundCircle"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/calRoundCircle">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-calRoundCircle" depends="-init-project">
+        <delete dir="${build.generated.dir}/jax-wsCache/calRoundCircle"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/services"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-calAreaCiecle, wsimport-client-calRoundCircle"/>
+</project>
